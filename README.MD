@@ -11,13 +11,14 @@ I am a happy parent of a kid who is pretty normal besides the fact that she is o
 
 # Future Plans
 
-[ ] Add more types of medicine to the database
-[ ] Add a map of the CHEO Main Campus
+- [ ] Add more types of medicine to the database
+- [ ] Add a map of the CHEO Main Campus
+- [ ] Add app icons and spalsh screen
+- [*] Move source code from the root
 
 # About Project
 
 This prject created using React Native and Expo written on TypeScript. Contains following lobraries:
-
 
 * expo
 * react-native

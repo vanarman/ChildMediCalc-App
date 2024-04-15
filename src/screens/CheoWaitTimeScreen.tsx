@@ -1,5 +1,5 @@
 import { Center, Spinner, Text, View } from "@gluestack-ui/themed";
-import WarningMessage from "components/WariningMessage";
+import WarningMessage from "src/components/WariningMessage";
 import { useEffect, useState } from "react";
 import { CHEO_WAIT_TIME_URL } from '@env';
 import { useTranslation } from "react-i18next";
