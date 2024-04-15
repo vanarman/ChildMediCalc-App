@@ -1,0 +1,53 @@
+[
+    {
+        "id": "TylenolInfants001",
+        "type": 1,
+        "size": 24,
+        "dose": 80,
+        "maxAge": 23,
+        "requireAge": false
+    },
+    {
+        "id": "TylenolChildren001",
+        "type": 1,
+        "size": 100,
+        "dose": 32,
+        "minAge": 24,
+        "maxAge": 132,
+        "requireAge": false
+    },
+    {
+        "id": "TylenolChildren002",
+        "type": 1,
+        "size": 100,
+        "dose": 32,
+        "minAge": 72,
+        "maxAge": 132,
+        "requireAge": false
+    },
+    {
+        "id": "AdvilPediatricDrops001",
+        "type": 2,
+        "size": 24,
+        "dose": 40,
+        "maxAge": 23,
+        "requireAge": true
+    },
+    {
+        "id": "AdvilPediatricDrops002",
+        "type": 2,
+        "size": 24,
+        "dose": 40,
+        "maxAge": 23,
+        "requireAge": true
+    },
+    {
+        "id": "AdvilChildren001",
+        "type": 2,
+        "size": 100,
+        "dose": 20,
+        "minAge": 24,
+        "maxAge": 144,
+        "requireAge": true
+    }
+]

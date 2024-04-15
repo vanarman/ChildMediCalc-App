@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "target": "es2020",
+        "jsx": "react-native",
+        "typeRoots": ["./env.d.ts"],
+        "strict": true,
+    },
+    "extends": "@tsconfig/react-native/tsconfig.json",
+    "exclude": ["node_modules", "build", ".expo"] 
+}
