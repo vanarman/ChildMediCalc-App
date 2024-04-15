@@ -1,0 +1,45 @@
+{
+    "defaults": {
+        "close": "Fermer",
+        "confirm": "Confirmer",
+        "warningTitle": "Warning",
+        "errorTitle": "Error!"
+    },
+    "screens": {
+        "iconTitle": {
+            "waitTime": "Attente",
+            "calculator": "Médicament"
+        }
+    },
+    "cheoWaitTime": {
+        "warningMessage": "N’hésitez pas à venir au service des urgences si votre enfant a besoin de soins médicaux urgents. Les patients les plus malades sont toujours traités en premier et il se peut que vous ne soyez pas vu par un médecin selon l’ordre d’arrivée. Ces chiffres montrent les patients qui sont actuellement en attente et NE permettent PAS de prévoir combien de temps vous devrez attendre. Lorsque le service des urgences est débordé, les patients ayant des besoins moins urgents peuvent avoir un temps d’attente beaucoup plus long.",
+        "patientsInLine": "Patients qui attendent de voir un médecin",
+        "longestWait": "Délai d’attente le plus long prévu pour les patients à faible urgence arrivant à cette heure",
+        "avarageWait": "Temps d'attente moyen prévu pour cette heure",
+        "lastUpdateTime": "Dernière mise à jour: {{updateTime}}"
+    },
+    "calculator": {
+        "calulateBtn": "Calculer",
+        "weight": "Entrez le poids",
+        "age": "Entrez l'âge",
+        "topPageWarning": "Assurez-vous de consulter le médecin avant d'utiliser tout médicament. Sachez que tous les médicaments ont une dose quotidienne maximale et que vous ne devez pas la dépasser.",
+        "drugDropdown": {
+            "placeholder": "Veuillez sélectionner le médicament"
+        },
+        "weightDropdown": {
+            "placeholder": "Sélectionnez les unités de poids"
+        },
+        "ageDropdown": {
+            "placeholder": "Sélectionnez les unités d'âge"
+        },
+        "dilaog": {
+            "header": "Dose calculée",
+            "bodyWaringBody": "Veuillez noter que la dose calculée est uniquement à titre de référence et que vous devez consulter le médecin pour connaître la quantité correcte à administrer."
+        },
+        "errors": {
+            "unsetAge": "L'âge n'est pas défini ou est incorrect.",
+            "incorrectWeight": "Le poids est incorrect ou n'est pas réglé.",
+            "unsutibleDrugByAge": "Ce médicament ne convient pas aux enfants d'un âge donné."
+        }
+    }
+}

@@ -1,0 +1,77 @@
+{
+    "defaults": {
+        "close": "Close",
+        "confirm": "Confirm",
+        "warningTitle": "Warning",
+        "errorTitle": "Error!"
+    },
+    "screens": {
+        "iconTitle": {
+            "waitTime": "Wait Time",
+            "calculator": "Drug Calc."
+        }
+    },
+    "cheoWaitTime": {
+        "warningMessage": "Please come in if your child needs urgent medical attention. The sickest patients are always treated first and you may not be seen in the order of arrival. These numbers show the patients currently waiting and DO NOT predict how long your wait will be. When the emergency department is busy, patients with less urgent needs may have much longer wait times.",
+        "patientsInLine": "Patients waiting to see a physician",
+        "longestWait": "Expected longest wait for lower urgency patients arriving this hour",
+        "avarageWait": "Expected average wait time arriving this hour",
+        "lastUpdateTime": "Last update {{updateTime}}"
+    },
+    "calculator": {
+        "calulateBtn": "Calculate",
+        "weight": "Enter weight",
+        "age": "Enter age",
+        "topPageWarning": "Make sure to consult with the doctor before use of any medication. Be advised that all medications have a daily maximum dose and you must not overreach it.",
+        "drugDropdown": {
+            "placeholder": "Please, select the medicine"
+        },
+        "weightDropdown": {
+            "placeholder": "Select weight units (kg/lb)"
+        },
+        "ageDropdown": {
+            "placeholder": "Select age units (month/year)"
+        },
+        "dilaog": {
+            "header": "Calculated Dose",
+            "bodyWaringBody": "Please, note that the calculated dose is only for your reference and you must consult with the doctor for the correct amount to be given."
+        },
+        "errors": {
+            "unsetAge": "Age is not set or incorrect.",
+            "incorrectWeight": "Weight is incorrect or not set.",
+            "unsutibleDrugByAge": "This drug is not suitable for children of a given age."
+        }
+    },
+    "drugsData": {
+        "TylenolInfants001": {
+            "name": "Infants' TYLENOL® Suspension",
+            "description": "When it comes to reducing fever or relieving pain, TYLENOL® is the brand recommended most by pediatricians.  Infants’ TYLENOL® works differently than other pain and fever medicines.  It also won’t upset little stomachs.  If your child is under 2 years of age, be sure to ask your doctor.",
+            "calculatedDoseUnit": "{{dose}} mL"
+        },
+        "TylenolChildren001": {
+            "name": "Children's TYLENOL® Suspension",
+            "description": "When it comes to reducing fever or relieving pain in children, TYLENOL® is the brand recommended most by pediatricians. Children’s TYLENOL® works differently than other pain and fever medicines. Children’s TYLENOL® contains acetaminophen and is gentle on little stomachs. It also comes in a variety of kid-friendly flavors.",
+            "calculatedDoseUnit": "{{dose}} mL"
+        },
+        "TylenolChildren002": {
+            "name": "Children’s TYLENOL® Cold + Flu Liquid Medicine",
+            "description": "Grape or bubblegum flavored liquid to tackle your child’s tough multi-symptom cold by temporarily relieving runny noses and headaches, quieting coughs and reducing fever. Children’s TYLENOL® Cold + Flu Oral Suspension contains acetaminophen.",
+            "calculatedDoseUnit": "{{dose}} mL"
+        },
+        "AdvilPediatricDrops001": {
+            "name": "Advil Pediatric Drops",
+            "description": "Advil Pediatric Drops relieve fevers for up to 8 hours, so your baby can rest peacefully. They come with a SURE-DOSE™ oral syringe for precise and easy dosing. For ages 4 months to 3 years. For children under 3 months of age consult your physician.",
+            "calculatedDoseUnit": "{{dose}} mL"
+        },
+        "AdvilPediatricDrops002": {
+            "name": "Pediatric Drops Fever from Colds or Flu",
+            "description": "Advil Pediatric Drops provide up to 8 hours of relief, so your little one can get the rest he or she needs to get better. They come with a SURE-DOSE™ oral syringe for precise and easy dosing. For ages 4 months to 3 years. For children under 3 months of age consult your physician.",
+            "calculatedDoseUnit": "{{dose}} mL"
+        },
+        "AdvilChildren001": {
+            "name": "Children's Advil",
+            "description": "Children’s Advil relieves fevers for up to 8 hours, so your kid can get back to being a kid. And it comes in great-tasting flavours, so your child would be willing to take it. Ages 2–12 years.",
+            "calculatedDoseUnit": "{{dose}} mL"
+        }
+    }
+}

@@ -33,3 +33,9 @@ yarn-error.*
 
 # typescript
 *.tsbuildinfo
+
+# gluestuck-ui
+.gluestack/
+
+# Environment
+.env
