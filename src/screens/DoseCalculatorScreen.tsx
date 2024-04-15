@@ -10,8 +10,8 @@ import DropDown, { SelectItem } from "../components/DropDown";
 import TextInput from "../components/TextInput";
 import PopUpDialog from "../components/PopUpDialog";
 import { AgeUnits } from "../models/AgeUnits";
-import WarningMessage from "components/WariningMessage";
-import Icon from "components/Icon";
+import WarningMessage from "src/components/WariningMessage";
+import Icon from "src/components/Icon";
 
 const DoseCalculatorScreen = () => {
   const [selectedDrug, setSelectedDrug] = useState<Drug | undefined>(undefined);

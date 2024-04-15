@@ -1,7 +1,7 @@
 import { Pressable, Center, Text } from "@gluestack-ui/themed";
 import { NavigationProp, useNavigation } from "@react-navigation/native";
 import Icon from "./Icon";
-import { RootStackParamList } from 'models/ScreenNavigation';
+import { RootStackParamList } from 'src/models/ScreenNavigation';
 
 interface TabButttonProps {
   name: keyof RootStackParamList;
