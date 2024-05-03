@@ -1,6 +1,4 @@
-import { ReactElement, useRef, Dispatch } from "react";
-import { useTranslation } from "react-i18next";
-import { 
+import {
   AlertDialog,
   AlertDialogHeader,
   AlertDialogFooter,
@@ -16,12 +14,14 @@ import {
   Button,
 } from "@gluestack-ui/themed";
 import { X } from "lucide-react-native";
+import { ReactElement, useRef, Dispatch } from "react";
+import { useTranslation } from "react-i18next";
 
-interface PopUpDialogProps{
+interface PopUpDialogProps {
   header?: string;
   body: string | ReactElement;
   show?: boolean;
-  bgColor?: string,
+  bgColor?: string;
   setShow?: Dispatch<any>;
   onConfirm?: Dispatch<any>;
   onCancel?: Dispatch<any>;
@@ -48,38 +48,65 @@ const PopUpDialog = ({
         }}
       >
         <AlertDialogBackdrop />
-        <AlertDialogContent  backgroundColor={bgColor}>
+        <AlertDialogContent backgroundColor={bgColor}>
           <AlertDialogHeader>
-            {!header ? null :<Heading size="lg" color="$secondary800">{header}</Heading>}
-            <AlertDialogCloseButton onPress={() => {setShow(false); onCancel}}>
+            {!header ? null : (
+              <Heading size="lg" color="$secondary800">
+                {header}
+              </Heading>
+            )}
+            <AlertDialogCloseButton
+              onPress={() => {
+                setShow(false);
+                onCancel;
+              }}
+            >
               <X strokeWidth={3} color="#262626" />
             </AlertDialogCloseButton>
           </AlertDialogHeader>
           <AlertDialogBody>
-            {typeof body === 'string' ? <Text size="sm" color="$secondary800">{body}</Text> : body}
+            {typeof body === "string" ? (
+              <Text size="sm" color="$secondary800">
+                {body}
+              </Text>
+            ) : (
+              body
+            )}
           </AlertDialogBody>
           <AlertDialogFooter>
-          <ButtonGroup space="lg">
-            {!onCancel ? <></> :
-              <Button
-                bg="$fuchsia700"
-                variant="outline"
-                action="secondary"
-                onPress={() => {setShow(false); onCancel}}
-              >
-                <ButtonText color="$white">{t('defaults.close')}</ButtonText>
-              </Button>
-            }
-            {!onConfirm ? <></> :
-              <Button
-                bg="$tertiary900"
-                action="negative"
-                onPress={() => {setShow(false); onConfirm}}
-              >
-                <ButtonText color="$white">{t('defaults.confirm')}</ButtonText>
-              </Button>
-            }
-          </ButtonGroup>
+            <ButtonGroup space="lg">
+              {!onCancel ? (
+                <></>
+              ) : (
+                <Button
+                  bg="$fuchsia700"
+                  variant="outline"
+                  action="secondary"
+                  onPress={() => {
+                    setShow(false);
+                    onCancel;
+                  }}
+                >
+                  <ButtonText color="$white">{t("defaults.close")}</ButtonText>
+                </Button>
+              )}
+              {!onConfirm ? (
+                <></>
+              ) : (
+                <Button
+                  bg="$tertiary900"
+                  action="negative"
+                  onPress={() => {
+                    setShow(false);
+                    onConfirm;
+                  }}
+                >
+                  <ButtonText color="$white">
+                    {t("defaults.confirm")}
+                  </ButtonText>
+                </Button>
+              )}
+            </ButtonGroup>
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>

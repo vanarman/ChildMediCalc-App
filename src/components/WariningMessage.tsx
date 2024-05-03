@@ -1,14 +1,12 @@
 import { Center, Text } from "@gluestack-ui/themed";
 
 interface WarningMessageProps {
-  text: string,
+  text: string;
 }
 
-const WarningMessage = ({
-    text,
-}: WarningMessageProps) => {
+const WarningMessage = ({ text }: WarningMessageProps) => {
   return (
-    <Center 
+    <Center
       bg="$pink50"
       borderCurve="circular"
       borderColor="$red600"
@@ -16,15 +14,11 @@ const WarningMessage = ({
       borderRadius="$md"
       borderWidth={1}
     >
-      <Text
-        color="$textDark800"
-        p="$5"
-        fontSize="$md"
-      >
+      <Text color="$textDark800" p="$5" fontSize="$md">
         {text}
       </Text>
     </Center>
   );
-}
+};
 
 export default WarningMessage;

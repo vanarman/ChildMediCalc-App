@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "ChildMediCalc",
-    "slug": "ChildMediCalc",
+    "slug": "kmedicalc",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -15,16 +15,24 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.vanarman.kmedicalc"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.vanarman.kmedicalc"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "34a54e77-4e4a-4c5a-a197-d977e8bb1fa9"
+      }
+    },
+    "owner": "vanarman"
   }
 }

@@ -1,25 +1,33 @@
-import i18n from 'i18next';
-import { initReactI18next } from 'react-i18next';
-import en from './en.json';
-import fr from './fr.json';
+import { getLocales } from "expo-localization";
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
+
+import en from "./en.json";
+import fr from "./fr.json";
 
 const resources = {
   en: { translation: en },
   fr: { translation: fr },
 };
 
-i18n.createInstance()
-  .use(initReactI18next) // passes i18n down to react-i18next
+const expoLocale = getLocales();
+
+i18n
+  .createInstance()
+  .use(initReactI18next)
   .init({
-    load: 'languageOnly',
-    compatibilityJSON: 'v3', //To make it work for Android devices, add this line.
+    load: "languageOnly",
+    compatibilityJSON: "v3",
     resources,
     // debug: true,
-    lng: 'en', // default language to use.
-    // if you're using a language detector, do not define the lng option
+    lng: expoLocale[0].languageCode === "fr" ? "fr" : "en",
+    fallbackLng: "en",
     interpolation: {
       escapeValue: false,
     },
+  })
+  .catch((e) => {
+    console.error("Error i18n: ", e);
   });
 
 export default i18n;

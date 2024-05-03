@@ -1,4 +1,4 @@
 export enum AgeUnits {
-    MONTH = 1,
-    YEAR = 2,
+  MONTH = 1,
+  YEAR = 2,
 }

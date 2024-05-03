@@ -1,15 +1,15 @@
+import { CHEO_WAIT_TIME_URL } from "@env";
 import { Center, Spinner, Text, View } from "@gluestack-ui/themed";
-import WarningMessage from "src/components/WariningMessage";
 import { useEffect, useState } from "react";
-import { CHEO_WAIT_TIME_URL } from '@env';
 import { useTranslation } from "react-i18next";
 import SafeAreaView from "react-native-safe-area-view";
+import WarningMessage from "src/components/WariningMessage";
 
 interface waitTimeData {
-  "aveWaitMin": number,
-  "patientCount": number,
-  "longestWaitMin": number,
-  "lastUpdated": string
+  aveWaitMin: number;
+  patientCount: number;
+  longestWaitMin: number;
+  lastUpdated: string;
 }
 
 const CheoWaitTimeScreen = () => {
@@ -19,23 +19,22 @@ const CheoWaitTimeScreen = () => {
 
   async function pullWaitData() {
     try {
-      const data = await fetch(CHEO_WAIT_TIME_URL)
-                      .then((response) => response.json() );
+      const data = await fetch(CHEO_WAIT_TIME_URL).then((response) =>
+        response.json(),
+      );
       setWaitData(data);
-    }
-    catch(err) {
-      // setError(true);
-    }
-    finally {
+    } catch (err) {
+      console.error(err);
+    } finally {
       setLoading(false);
     }
   }
 
-  const time_convert = (time: number) => { 
-    var hours = Math.floor(time / 60);  
-    var minutes = Math.round(time % 60);
-    return hours +"h "+ minutes +"m";         
-  }
+  const time_convert = (time: number) => {
+    const hours = Math.floor(time / 60);
+    const minutes = Math.round(time % 60);
+    return hours + "h " + minutes + "m";
+  };
 
   useEffect(() => {
     pullWaitData();
@@ -44,38 +43,68 @@ const CheoWaitTimeScreen = () => {
       setLoading(true);
       pullWaitData();
     }, 900000); // Update every 15 min
-  
+
     return () => clearInterval(interval);
   }, []);
 
-  return(
+  return (
     <SafeAreaView style={{ flex: 1 }}>
       <View style={{ flex: 1 }}>
-        <WarningMessage text={t('cheoWaitTime.warningMessage')} />
+        <WarningMessage text={t("cheoWaitTime.warningMessage")} />
         <Center alignItems="center" flexGrow={2}>
-          { loading ? <Spinner size="large" color="$fuchsia900" /> : 
+          {loading ? (
+            <Spinner size="large" color="$fuchsia900" />
+          ) : (
             <>
               <Center flexGrow={1} alignContent="center">
                 <Text allowFontScaling bold fontSize="$8xl" color="$fuchsia900">
                   {waitData?.aveWaitMin && time_convert(waitData?.aveWaitMin)}
                 </Text>
-                <Text allowFontScaling textAlign="center" fontSize="$md" color="$textDark800">{t('cheoWaitTime.avarageWait')}</Text>
-                <Text allowFontScaling bold fontSize="$8xl" color="$fuchsia900">
-                  {waitData?.longestWaitMin && time_convert(waitData?.longestWaitMin)}
+                <Text
+                  allowFontScaling
+                  textAlign="center"
+                  fontSize="$md"
+                  color="$textDark800"
+                >
+                  {t("cheoWaitTime.avarageWait")}
                 </Text>
-                <Text allowFontScaling textAlign="center" fontSize="$md" color="$textDark800">{t('cheoWaitTime.longestWait')}</Text>
-                <Text allowFontScaling bold fontSize="$8xl" color="$fuchsia900">{waitData?.patientCount && waitData?.patientCount}</Text>
-                <Text allowFontScaling textAlign="center" fontSize="$md" color="$textDark800">{t('cheoWaitTime.patientsInLine')}</Text>            
+                <Text allowFontScaling bold fontSize="$8xl" color="$fuchsia900">
+                  {waitData?.longestWaitMin &&
+                    time_convert(waitData?.longestWaitMin)}
+                </Text>
+                <Text
+                  allowFontScaling
+                  textAlign="center"
+                  fontSize="$md"
+                  color="$textDark800"
+                >
+                  {t("cheoWaitTime.longestWait")}
+                </Text>
+                <Text allowFontScaling bold fontSize="$8xl" color="$fuchsia900">
+                  {waitData?.patientCount && waitData?.patientCount}
+                </Text>
+                <Text
+                  allowFontScaling
+                  textAlign="center"
+                  fontSize="$md"
+                  color="$textDark800"
+                >
+                  {t("cheoWaitTime.patientsInLine")}
+                </Text>
               </Center>
               <Center flexGrow={0.5} justifyContent="flex-end">
-                <Text fontSize="$sm">{t('cheoWaitTime.lastUpdateTime', { updateTime: new Date().toLocaleString()})}</Text>
+                <Text fontSize="$sm">
+                  {t("cheoWaitTime.lastUpdateTime", {
+                    updateTime: new Date().toLocaleString(),
+                  })}
+                </Text>
               </Center>
             </>
-          }
+          )}
         </Center>
       </View>
     </SafeAreaView>
   );
-}
+};
 
 export default CheoWaitTimeScreen;

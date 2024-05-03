@@ -1,4 +1,4 @@
-import { 
+import {
   FormControl,
   FormControlLabel,
   FormControlLabelText,
@@ -11,12 +11,12 @@ import { Dispatch } from "react";
 import { InputModeOptions, KeyboardTypeOptions } from "react-native";
 
 interface TextInputProps {
-  label?: string,
-  helpText?: string,
-  value: string,
+  label?: string;
+  helpText?: string;
+  value: string;
   inputMode?: InputModeOptions | undefined;
   keyboardType?: KeyboardTypeOptions | undefined;
-  onChange: Dispatch<any>,
+  onChange: Dispatch<any>;
 }
 
 const TextInput = ({
@@ -27,16 +27,15 @@ const TextInput = ({
   value,
   onChange,
 }: TextInputProps) => {
-
   return (
     <FormControl minWidth="$full">
-      {!label ? null : 
+      {!label ? null : (
         <FormControlLabel>
           <FormControlLabelText fontSize="$lg">{label}</FormControlLabelText>
         </FormControlLabel>
-      }
+      )}
       <Input>
-        <InputField 
+        <InputField
           allowFontScaling
           inputMode={inputMode}
           keyboardType={keyboardType}
@@ -44,15 +43,13 @@ const TextInput = ({
           value={value}
         />
       </Input>
-      {!helpText ? null :
+      {!helpText ? null : (
         <FormControlHelper>
-          <FormControlHelperText>
-            {helpText}
-          </FormControlHelperText>
+          <FormControlHelperText>{helpText}</FormControlHelperText>
         </FormControlHelper>
-      }
+      )}
     </FormControl>
   );
-}
+};
 
 export default TextInput;
