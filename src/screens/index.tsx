@@ -1,7 +1,4 @@
-import DoseCalculatorScreen from './DoseCalculatorScreen';
-import CheoWaitTimeScreen from './CheoWaitTimeScreen';
+import CheoWaitTimeScreen from "./CheoWaitTimeScreen";
+import DoseCalculatorScreen from "./DoseCalculatorScreen";
 
-export {
-	DoseCalculatorScreen,
-	CheoWaitTimeScreen,
-}
+export { DoseCalculatorScreen, CheoWaitTimeScreen };
